@@ -31,3 +31,19 @@ $(document).ready(function() {
   });
 });
 
+
+/*
+To do:
+make dancer visually distinct
+make abutton that lines dancers to one side
+  makelineUP method
+use an image
+dancer interact with others
+  by iterating through array window.dancers
+maker a dancer that reacts to the mouse
+
+Completed:
+
+
+
+*/
