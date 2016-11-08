@@ -22,14 +22,30 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+
+      // $("body").height() * Math.random(),
+      // $("body").width() * Math.random(),
+      // Math.random() * 1000
+
+    var hillary = new dancerMakerFunction(
+      300,
+      580,
+      300
     );
-    $('body').append(dancer.$node);
+    
+    var trump = new dancerMakerFunction(
+      400,
+      680,
+      100
+    );
+
+
+
+    $('body').append(hillary.$node);
+    $('body').append(trump.$node2);
   });
 });
+
 
 
 /*
