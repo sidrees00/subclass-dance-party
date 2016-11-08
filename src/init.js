@@ -28,15 +28,15 @@ $(document).ready(function() {
       // Math.random() * 1000
 
     var hillary = new dancerMakerFunction(
-      300,
+      380,
       580,
-      300
+      500
     );
     
     var trump = new dancerMakerFunction(
-      400,
-      680,
-      100
+      380,
+      420,
+      500
     );
 
 
