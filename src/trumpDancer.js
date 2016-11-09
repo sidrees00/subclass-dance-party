@@ -1,8 +1,8 @@
 var makeTrumpDancer = function(top, left, timeBetweenSteps) { 
-  makeDancer.call(this);
+  makeDancer.call(this, top, left, timeBetweenSteps);
 
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<img class="trump"></img>');
+  //this.$node = $('<img class="trump"></img>');
   
 };
 
@@ -29,6 +29,6 @@ makeTrumpDancer.prototype.setPosition = function(top, left) {
     top: top,
     left: left
   };
-  this.$node2.css(styleSettings);
+  //this.$node2.css(styleSettings);
 };
 
