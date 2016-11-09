@@ -1,8 +1,17 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  var lineUp = function(object) {
+    var styleSettings = {
+      top: 45,
+      left: 0
+    };
 
+    this.$node.css(styleSettings);
   
+  };
+
+
 
 
   $('.addDancerButton').on('click', function(event) {
@@ -34,16 +43,18 @@ $(document).ready(function() {
       500
       );
       $('body').append(hillary.$node);
+      console.log(hillary);
       window.dancers.push(hillary);
     
     } else {
       var trump = new dancerMakerFunction(
-      280,
-      600,
-      500
+      900,
+      800,
+      600
       );
 
       $('body').append(trump.$node2);
+      console.log(trump);
       window.dancers.push(trump);
     } 
 
@@ -56,9 +67,11 @@ $(document).ready(function() {
   });
 
 
-
   $('#lineUpButton').on('click', function(event) {
-    console.log(dancers[0]);
+    for (var i = 0; i < window.dancers.length; i++) {
+      lineUp.call(window.dancers[0]);
+    }
+    
   });
 
   
@@ -73,7 +86,7 @@ $(document).ready(function() {
 /*
 To do:
 
-make abutton that lines dancers to one side
+
   makelineUP method
 use an image
 dancer interact with others
@@ -82,6 +95,8 @@ maker a dancer that reacts to the mouse
 
 Completed:
 make dancer visually distinct
+make abutton that lines dancers to one side
+new
 
 
 
