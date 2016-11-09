@@ -1,6 +1,9 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  
+
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -21,7 +24,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
 
-    console.log(dancerMakerFunctionName);
+    
     if (dancerMakerFunctionName === "makeBlinkyDancer") {
       var hillary = new dancerMakerFunction(
       380,
@@ -46,13 +49,20 @@ $(document).ready(function() {
       // Math.random() * 1000
   });
 
+  $('#lineUpButton').on('click', function(event) {
+    hillary.$node.lineUp();
+  });
+
 });
+
+  
+
 
 
 
 /*
 To do:
-make dancer visually distinct
+
 make abutton that lines dancers to one side
   makelineUP method
 use an image
@@ -61,7 +71,22 @@ dancer interact with others
 maker a dancer that reacts to the mouse
 
 Completed:
+make dancer visually distinct
 
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

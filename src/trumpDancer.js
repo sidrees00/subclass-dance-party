@@ -17,10 +17,6 @@ makeTrumpDancer.prototype.step = function() {
   this.$node2.toggle();
 };
 
-makeTrumpDancer.prototype.lineUp = function() {
-  
-};
-
 
 makeTrumpDancer.prototype.setPosition = function(top, left) {
     // Use css top and left properties to position our <span> tag
