@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
+
   
 
 
@@ -23,6 +24,7 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
+    
 
     
     if (dancerMakerFunctionName === "makeBlinkyDancer") {
@@ -32,6 +34,7 @@ $(document).ready(function() {
       500
       );
       $('body').append(hillary.$node);
+      window.dancers.push(hillary);
     
     } else {
       var trump = new dancerMakerFunction(
@@ -41,17 +44,24 @@ $(document).ready(function() {
       );
 
       $('body').append(trump.$node2);
+      window.dancers.push(trump);
     } 
 
     
       // $("body").height() * Math.random(),
       // $("body").width() * Math.random(),
       // Math.random() * 1000
+    
+  
   });
 
+
+
   $('#lineUpButton').on('click', function(event) {
-    hillary.$node.lineUp();
+    console.log(dancers[0]);
   });
+
+  
 
 });
 
