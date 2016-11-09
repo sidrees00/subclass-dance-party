@@ -1,13 +1,20 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  
+  var called = 1;
+  
   var lineUp = function(object) {
+    
     var styleSettings = {
-      top: 45,
+      top: 45 * called,
       left: 0
+
     };
+    called += 3;
 
     this.$node.css(styleSettings);
+    this.$node2.css(styleSettings);
   
   };
 
@@ -38,23 +45,21 @@ $(document).ready(function() {
     
     if (dancerMakerFunctionName === "makeBlinkyDancer") {
       var hillary = new dancerMakerFunction(
-      380,
-      580,
-      500
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
       );
       $('body').append(hillary.$node);
-      console.log(hillary);
       window.dancers.push(hillary);
     
     } else {
       var trump = new dancerMakerFunction(
-      900,
-      800,
-      600
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
       );
 
       $('body').append(trump.$node2);
-      console.log(trump);
       window.dancers.push(trump);
     } 
 
@@ -69,7 +74,8 @@ $(document).ready(function() {
 
   $('#lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      lineUp.call(window.dancers[0]);
+      lineUp.call(window.dancers[i]);
+      console.log(window.dancers[i], i);
     }
     
   });
